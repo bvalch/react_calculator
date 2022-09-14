@@ -107,6 +107,15 @@ describe('Calculator', () => {
 
   });
 
+  it('should display error when dividing by zero', () => {
+    fireEvent.click(number2)
+    fireEvent.click(divide)
+    fireEvent.click(number0)
+    fireEvent.click(equals)
+    expect(runningTotal.textContent).toEqual('Error')
+
+  });
+
 })
 
 // // fireEvent.click()
